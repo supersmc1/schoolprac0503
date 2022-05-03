@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">어린이날 은 사람이 겁나 많을거야ㅜ
+    <div>
+      <button class="a">A</button>
+      <button class="b">B</button>
+    </div>
+  </div>
+  
+
+  <script>
+    const root = document.getElementById("root");
+    const a = document.getElementsByClassName("a");
+    const b = document.getElementsByClassName("b");
+    //console.log(a);
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    root.style.display = "flex";
+    root.style.justifyContent = "center";
+    root.style.alignItems = "center";
+    root.style.flexDirection = "column"
+    root.style.fontSize = "50px"
+
+    a[0].style.width = "10vw";
+    a[0].style.height = "10vw";
+    a[0].style.borderRadius = "30px"
+    a[0].style.backgroundColor = "lightCoral"
+    //console.dir(a[0])
+    b[0].style.width = "10vw";
+    b[0].style.height = "10vw";
+    b[0].style.borderRadius = "30px"
+    b[0].style.backgroundColor = "lightGreen"
+
+    
+    
+    a[0].addEventListener("click",function(){
+      root.style.backgroundColor = "black"
+      root.style.color = "white"
+      root.style.transition = "1s"
+    });
+
+    b[0].addEventListener("click",function(){
+      root.style.backgroundColor = "white"
+      root.style.color = "black"
+      root.style.transition = "1s"
+    });
+    
+
+  </script>
+</body>
+</html>
